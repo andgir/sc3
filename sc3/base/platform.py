@@ -178,7 +178,7 @@ class LinuxPlatform(UnixPlatform):
     def _startup(self):
         # // default jack port hookup
         os.environ['SC_JACK_DEFAULT_INPUTS'] = 'system'
-        os.environ['SC_JACK_DEFAULT_OUTPUTS'] = 'system'
+        os.environ['SC_JACK_DEFAULT_OUTPUTS'] = 'darkice:left,darkice:right,'
         # // automatically start jack when booting the server
         # // can still be overridden with JACK_NO_START_SERVER
         os.environ['JACK_START_SERVER'] = 'true'
